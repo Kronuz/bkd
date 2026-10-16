@@ -7,6 +7,7 @@ bkd.hh             The library: point, box, tree<D> (build, query, count).
 test/test.cc       Queries and counts against brute force (1, 2, 3, 8 dimensions; leaf sizes 1-512); interval intersection.
 fuzz/fuzz_tree.cc  libFuzzer: points and boxes from the input, checked against brute force.
 CMakeLists.txt     INTERFACE target bkd::bkd; tests and the fuzz target when top-level.
+docs/bkd.d2     README diagram; render: d2 --layout elk --sketch --theme 302 docs/bkd.d2 docs/bkd.svg
 ```
 
 ## Invariants

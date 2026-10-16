@@ -1,0 +1,13 @@
+# bkd: prune by cell boxes. Render: d2 --layout elk --sketch --theme 302 docs/bkd.d2 docs/bkd.svg
+direction: down
+q: "query box" {shape: oval}
+root: "root cell" 
+a: "cell A\noutside → skip" {style.stroke-dash: 3}
+b: "cell B\ninside → report all" {style.fill: "#e6f4ea"}
+c: "cell C\ncrosses the edge"
+leaf: "leaf (≤512 points)\ncompare each point" {shape: stored_data}
+q -> root
+root -> a
+root -> b
+root -> c
+c -> leaf
